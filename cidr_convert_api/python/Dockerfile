@@ -1,7 +1,7 @@
 FROM python:3-alpine
 
 WORKDIR /app
-
+RUN pip3 install Flask
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
