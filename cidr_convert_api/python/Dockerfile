@@ -1,9 +1,12 @@
 FROM python:3-alpine
 
 WORKDIR /app
-RUN pip3 install Flask
+
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+
+RUN pip install requirements.txt
+
+#RUN pip install -r requirements.txt
 
 COPY . .
 CMD ["ash", "-c", "python api.py"]
